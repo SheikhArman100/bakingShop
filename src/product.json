@@ -1,0 +1,13 @@
+[
+  {
+    "id":"1",
+    
+    "title": "Love Cake",
+    "desc": "a sweet, baked, breadlike food, made with or without shortening, and usually containing flour, sugar, baking powder or soda, eggs, and liquid flavoring a sweet, baked, breadlike food, made with or without shortening, and usually containing flour, sugar, baking powder or soda, eggs, and liquid flavoringa sweet, baked, breadlike food, made with or without shortening, and usually containing flour, sugar, baking powder or soda, eggs, and liquid flavoringa sweet, baked, breadlike food, made with or without shortening, and usually containing flour, sugar, baking powder or soda, eggs, and liquid flavoringa sweet, baked, breadlike food, made with or without shortening, and usually containing flour, sugar, baking powder or soda, eggs, and liquid flavoringa sweet, baked, breadlike food, made with or without shortening, and usually containing flour, sugar, baking powder or soda, eggs, and liquid flavoring",
+    "img": "https://images.unsplash.com/photo-1621750448860-8770d75c2907?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bG92ZSUyMGNha2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "categories": "Cake",
+    "price": "400",
+    "inStock": "yes"
+  }
+  
+]
