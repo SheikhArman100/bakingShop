@@ -23,7 +23,7 @@ export const FormSignin = () => {
     });
   const loginUser = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    // console.log(formData);
     try {
       const { data } = await axios.post(
         "https://bakingshop100.herokuapp.com/api/auth/login",
@@ -39,8 +39,8 @@ export const FormSignin = () => {
           if (email) generateError(email);
           else if (password) generateError(password);
         } else {
+          // console.log(data);
           setCookie('jwt',data.token)
-          console.log(data);
           navigate("/");
           toast("Welcome to Baking Tales !", {
             position: toast.POSITION.TOP_RIGHT,

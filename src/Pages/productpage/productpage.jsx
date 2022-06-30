@@ -26,7 +26,7 @@ const textVariant = {
 const Productpage = () => {
   const location = useLocation();
   const id = location.pathname.split("/")[2];
-  console.log(id)
+  // console.log(id)
   const navigate=useNavigate()
   const [quantity, setQuantity] = useState(1);
   const [item, setItem] = useState({});
@@ -34,9 +34,9 @@ const Productpage = () => {
     const getProducts=async()=>{
       try {
         const response=await Axios.get(`https://bakingshop100.herokuapp.com/api/products/${id}`)
-        console.log(response);
+        // console.log(response);
         setItem(response.data)
-        console.log(item)
+        // console.log(item)
       } catch (error) {
         console.log(error)
       }

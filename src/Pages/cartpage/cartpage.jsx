@@ -67,14 +67,17 @@ const CartPage = () => {
           tokenId: stripeToken.id,
           amount: total,
         });
-        console.log(res.data)
+        // console.log(res.data)
         navigate('/',{
           stripeData: res.data,
           products: cart_products, });
-        toast("Wow so easy!")
-      } catch(err) {
-          navigate('/')
           toast("Order payment Completed", {
+            position: toast.POSITION.TOP_RIGHT,
+            theme: "dark"
+          })
+      } catch(err) {
+          
+          toast("Order payment Failed", {
             position: toast.POSITION.TOP_RIGHT,
             theme: "dark"
           })
