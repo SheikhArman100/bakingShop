@@ -42,7 +42,7 @@ const Productlist = () => {
     setLoading(true)
     try {
       setActiveGenre('cake')
-      const response=await Axios.get("http://localhost:5001/api/products/cake")
+      const response=await Axios.get("https://bakingshop100.herokuapp.com/api/products/cake")
       setLoading(false)
       setFoodList(response.data)
       
@@ -57,7 +57,7 @@ const Productlist = () => {
     setLoading(true)
     try {
       setActiveGenre('cupcake')
-      const response=await Axios.get("http://localhost:5001/api/products/cupcake")
+      const response=await Axios.get("https://bakingshop100.herokuapp.com/api/products/cupcake")
       setLoading(false)
       setFoodList(response.data)
       
@@ -72,7 +72,7 @@ const Productlist = () => {
     setLoading(true)
     try {
       setActiveGenre('brownies')
-      const response=await Axios.get("http://localhost:5001/api/products/brownies")
+      const response=await Axios.get("https://bakingshop100.herokuapp.com/api/products/brownies")
       setLoading(false)
       setFoodList(response.data)
       
