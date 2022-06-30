@@ -1,8 +1,11 @@
 
 import formImage from '../../assets/formimage111.jpg';
-import { Navbar } from '../../Components/navbar/navbar';
+
+import { lazy } from 'react';
 import FormSignup from './formsignup';
 import { FormContainer, FormContentLeft, SignupClose } from './signup.styled';
+const Navbar=lazy(()=>import("../../Components/navbar/navbar"));
+const Contactus=lazy(()=>import("../../Containers/contactus/contactus"));
 
 
 
@@ -21,6 +24,7 @@ const Signup = () => { ;
         
         
       </FormContainer>
+      <Contactus/>
       
     </>
   );

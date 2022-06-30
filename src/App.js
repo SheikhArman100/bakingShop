@@ -52,7 +52,7 @@ function App() {
           <Route path="/aboutus" element={<AboutusPage />} />
         </Routes>
         </Suspense>
-        <Contactus/>
+        
       </ThemeProvider>
       </ShopProvider>
     </div>

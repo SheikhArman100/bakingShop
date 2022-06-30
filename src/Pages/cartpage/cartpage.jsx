@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 
 
 import StripeCheckout from "react-stripe-checkout";
-import { Navbar } from "../../Components/navbar/navbar";
+
 import { useShop } from '../../ContextApi/useShop';
 
 import Axios from 'axios';
@@ -14,7 +14,11 @@ import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import logo from '../../assets/logo.png';
 
+
 import { Bottom, CartContainer, Details, Image, Info, InfoRow, PriceDetail, Product, ProductDetail, ProductInfo, ProductPrice, Summary, SummaryItem, SummaryItemPrice, SummaryItemText, SummaryTitle, Title, Top, TopButton } from './cartpage.styled';
+import { lazy } from 'react';
+const Navbar=lazy(()=>import("../../Components/navbar/navbar"));
+const Contactus=lazy(()=>import("../../Containers/contactus/contactus"));
 const upperVariant = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
   hidden: { opacity: 0, y: -200 }
@@ -76,7 +80,6 @@ const CartPage = () => {
             theme: "dark"
           })
       } catch(err) {
-          
           toast("Order payment Failed", {
             position: toast.POSITION.TOP_RIGHT,
             theme: "dark"
@@ -179,6 +182,7 @@ const CartPage = () => {
           </Summary>
         </Bottom>
       </CartContainer>
+      <Contactus/>
       
     </>
   );

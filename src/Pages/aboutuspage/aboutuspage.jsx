@@ -1,6 +1,7 @@
-
 import Aboutus from '../../Containers/aboutus/aboutus'
-import { Navbar } from "../../Components/navbar/navbar";
+import { lazy } from 'react';
+const Navbar=lazy(()=>import("../../Components/navbar/navbar"));
+const Contactus=lazy(()=>import("../../Containers/contactus/contactus"));
 
 const AboutusPage = () => {
   return (
@@ -8,6 +9,7 @@ const AboutusPage = () => {
     
     <Navbar/>
     <Aboutus/>
+    <Contactus/>
     
 
     

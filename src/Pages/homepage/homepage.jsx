@@ -1,8 +1,9 @@
 import { lazy } from "react";
-import { ToastContainer } from "react-toastify";
 
 
-import { Navbar } from "../../Components/navbar/navbar";
+
+const Navbar=lazy(()=>import("../../Components/navbar/navbar"));
+const Contactus=lazy(()=>import("../../Containers/contactus/contactus"));
 
 const Home = lazy(() => import("../../Containers/home/home"));
 const Services = lazy(() => import("../../Containers/services/services"));
@@ -19,6 +20,7 @@ const HomePage = () => {
       <Services />
       <Shop />
       <Aboutus />
+      <Contactus/>
       
     </>
   );

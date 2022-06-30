@@ -1,10 +1,13 @@
 
 import Axios from "axios"
 import { useEffect, useState } from 'react'
-import { Navbar } from "../../Components/navbar/navbar"
+
+import { lazy } from 'react'
 import { Shopcard } from '../../Components/shopcard/shopcard'
 import { Container } from '../../Themes/globalComponents.styled'
 import { Filter, ProductContainer, ProductFilter, ProductHeader, ProductItems } from "./productlist.styled"
+const Navbar=lazy(()=>import("../../Components/navbar/navbar"));
+const Contactus=lazy(()=>import("../../Containers/contactus/contactus"));
 
 
 
@@ -126,6 +129,7 @@ return (
       
 
     </Container>
+    <Contactus/>
     </>
   )
 }
