@@ -1,9 +1,9 @@
 
 
-import { lazy } from 'react';
+import { Navbar } from '../../Components/navbar/navbar';
+import { Contactus } from '../../Containers/contactus/contactus';
 import { Services } from '../../Containers/services/services';
-const Navbar=lazy(()=>import("../../Components/navbar/navbar"));
-const Contactus=lazy(()=>import("../../Containers/contactus/contactus"));
+
 
 
  const ServicePage = () => {

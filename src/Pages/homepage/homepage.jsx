@@ -2,8 +2,9 @@ import { lazy } from "react";
 
 
 
-const Navbar=lazy(()=>import("../../Components/navbar/navbar"));
-const Contactus=lazy(()=>import("../../Containers/contactus/contactus"));
+import { Navbar } from '../../Components/navbar/navbar'
+import { Contactus } from '../../Containers/contactus/contactus'
+
 
 const Home = lazy(() => import("../../Containers/home/home"));
 const Services = lazy(() => import("../../Containers/services/services"));

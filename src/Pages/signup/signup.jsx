@@ -1,11 +1,11 @@
 
 import formImage from '../../assets/formimage111.jpg';
 
-import { lazy } from 'react';
+import { Navbar } from '../../Components/navbar/navbar';
+import { Contactus } from '../../Containers/contactus/contactus';
 import FormSignup from './formsignup';
 import { FormContainer, FormContentLeft, SignupClose } from './signup.styled';
-const Navbar=lazy(()=>import("../../Components/navbar/navbar"));
-const Contactus=lazy(()=>import("../../Containers/contactus/contactus"));
+
 
 
 

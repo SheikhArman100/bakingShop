@@ -8,11 +8,11 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useShop } from '../../ContextApi/useShop';
 // import product from '../../product.json';
 import { useAnimation } from "framer-motion";
-import { lazy } from 'react';
 import { useInView } from "react-intersection-observer";
+import { Navbar } from '../../Components/navbar/navbar';
+import { Contactus } from '../../Containers/contactus/contactus';
 import { AddContainer, Amount, AmountContainer, Button, Desc, Image, ImgContainer, InfoContainer, Price, Title, Wrapper } from './productpage.styled';
-const Navbar=lazy(()=>import("../../Components/navbar/navbar"));
-const Contactus=lazy(()=>import("../../Containers/contactus/contactus"));
+
 
 const imgVariant = {
   visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },

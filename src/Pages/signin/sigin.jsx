@@ -1,11 +1,11 @@
 import { useNavigate } from 'react-router-dom';
 import formImage2 from '../../assets/formimage222.jpg';
 
-import { lazy } from 'react';
+import { Navbar } from '../../Components/navbar/navbar';
+import { Contactus } from '../../Containers/contactus/contactus';
 import { FormContainer, FormContentLeft, SignupClose } from '../signup/signup.styled';
 import { FormSignin } from './formsignin';
-const Navbar=lazy(()=>import("../../Components/navbar/navbar"));
-const Contactus=lazy(()=>import("../../Containers/contactus/contactus"));
+
 
 
  const Signin = () => {
