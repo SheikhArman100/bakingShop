@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import { FormContentRight, FormInputButton, FormInputs, FormInputSignup } from '../signup/signup.styled';
 export const FormSignin = () => {
   const navigate = useNavigate();
-  const [cookies] = useCookies(["cookie-name"]);
+  const [cookies,setCookie] = useCookies(["cookie-name"]);
   
   const [formData, setFormData] = useState({
     
@@ -39,6 +39,8 @@ export const FormSignin = () => {
           if (email) generateError(email);
           else if (password) generateError(password);
         } else {
+          setCookie('jwt',data.token)
+          console.log(data);
           navigate("/");
           toast("Welcome to Baking Tales !", {
             position: toast.POSITION.TOP_RIGHT,
