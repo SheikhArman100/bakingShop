@@ -8,11 +8,11 @@ import { ShopContainer, ShopHeader, ShopItems, ShowAllButton } from './shop.styl
 const Shop = () => {
   const navigate=useNavigate()
   const[foodlist,setFoodList]=useState([]);
-  const [loading,setLoading]=useState(true)
+  const [loading,setLoading]=useState(false)
 
   useEffect(()=>{
     const getPopularProducts=async()=>{
-      
+      setLoading(true)
       try {
         const response=await Axios.get("https://bakingshop100.herokuapp.com/api/products/popular")
         // console.log(response.data)
