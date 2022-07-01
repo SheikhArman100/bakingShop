@@ -8,17 +8,21 @@ import { ShopContainer, ShopHeader, ShopItems, ShowAllButton } from './shop.styl
 const Shop = () => {
   const navigate=useNavigate()
   const[foodlist,setFoodList]=useState([]);
+  const [loading,setLoading]=useState(true)
 
   useEffect(()=>{
     const getPopularProducts=async()=>{
+      
       try {
         const response=await Axios.get("https://bakingshop100.herokuapp.com/api/products/popular")
         // console.log(response.data)
+        setLoading(false)
         setFoodList(response.data)
       } catch (error) {
         console.log(error);
       }
       
+
     }
     getPopularProducts()
     
@@ -35,7 +39,7 @@ const Shop = () => {
         <ShopItems>
           {
             foodlist.map((e)=>
-              <Shopcard image={e.img} title={e.title} price={e.price} navigateId={e._id} />
+              <Shopcard image={e.img} title={e.title} price={e.price} navigateId={e._id} loading={loading} />
             )
           }
             
